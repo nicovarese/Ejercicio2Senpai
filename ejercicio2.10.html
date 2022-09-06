@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numeroEnteroAleatorio = (min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+      };
+
+      const numeroUsuario = parseInt(prompt("Introduzca su numero aquí"));
+
+      let numeroCPU = numeroEnteroAleatorio(1, 10);
+      console.log(numeroCPU);
+
+      if (numeroCPU === numeroUsuario) {
+        alert("Buen trabajo!");
+      } else {
+        alert("No corresponde");
+      }
+    </script>
+  </body>
+</html>
